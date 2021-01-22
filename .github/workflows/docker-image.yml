@@ -25,5 +25,5 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.TOKEN }}
         registry: ghcr.io
-        repository: platformercloud/gsr-mirror
+        repository: platformercloud/git-mirror
         tag_with_ref: true
