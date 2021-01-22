@@ -5,4 +5,4 @@
 
 ### Google Source Repository Mirror
 
-[Read Documentation](./gsr-mirror/readme.md)
+[Read Documentation](./gsr-mirror)
