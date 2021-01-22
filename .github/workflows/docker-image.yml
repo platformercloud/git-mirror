@@ -2,18 +2,22 @@ name: Docker Image CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches:  
+      - master 
 
 jobs:
 
   build:
 
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./gsr-mirror
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      working-directory: ./gsr-mirror
+      name: Checkout
     
     - name: Image Build Push
       uses: docker/build-push-action@v2
