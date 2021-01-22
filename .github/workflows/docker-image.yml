@@ -1,0 +1,25 @@
+name: Docker Image CI/CD
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      working-directory: ./gsr-mirror
+    
+    - name: Image Build Push
+      uses: docker/build-push-action@v2
+      with:
+        username: ${{ github.actor }}
+        password: ${{ secrets.TOKEN }}
+        registry: ghcr.io
+        repository: platformercloud/gsr-mirror
+        tag_with_ref: true
