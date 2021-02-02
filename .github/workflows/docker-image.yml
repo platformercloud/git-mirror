@@ -11,10 +11,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    # defaults:
-    #   run:
-    #     working-directory: ./gsr-mirror
-
     steps:
       - uses: actions/checkout@v2
         name: Checkout
@@ -26,6 +22,7 @@ jobs:
       - name: Image Build Push
         uses: docker/build-push-action@v2
         with:
+          context: ./gsr-mirror
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }}
           registry: ghcr.io

@@ -1,5 +1,5 @@
 # Google Source Repository Mirror
-> Mirror from Github Gitlab and Bitbucket to Google GSR
+> Mirror from GitHub Gitlab and Bitbucket to Google GSR
 
 ## Requirements
 
