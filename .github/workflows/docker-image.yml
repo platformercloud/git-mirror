@@ -21,7 +21,7 @@ jobs:
 
       - name: Directory Change
         working-directory: ./gsr-mirror
-        run: echo $(pwd)
+        run: echo $(pwd) && ls -a
 
       - name: Image Build Push
         uses: docker/build-push-action@v2
