@@ -25,10 +25,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }}
           registry: ghcr.io
-          repository: platformercloud/git-mirror
+          repository: platformercloud/git-mirror-gsr
           tag_with_ref: true
-          build-args: |
-            PROGRESS_URL=
-            SOURCE_URL=
-            GSR_REPO=
-            SUCCESS_URL=
