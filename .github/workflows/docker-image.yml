@@ -11,13 +11,17 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./gsr-mirror
+    # defaults:
+    #   run:
+    #     working-directory: ./gsr-mirror
 
     steps:
       - uses: actions/checkout@v2
         name: Checkout
+
+      - name: Directory Change
+        working-directory: ./gsr-mirror
+        run: echo $(pwd)
 
       - name: Image Build Push
         uses: docker/build-push-action@v2
@@ -27,3 +31,5 @@ jobs:
           registry: ghcr.io
           repository: platformercloud/git-mirror-gsr
           tag_with_ref: true
+        
+         
