@@ -2,7 +2,7 @@
 
 curl -s -X GET $PROGRESS_URL
 
-export GOOGLE_PROJECT_ID=$( cat /$(pwd)/key.json | jq -r .project_id
+export GOOGLE_PROJECT_ID=$( cat /$(pwd)/key.json | jq -r .project_id)
 
 # gcloud auth
 gcloud auth activate-service-account --key-file=$(pwd)/key.json
