@@ -12,7 +12,7 @@ git config --global credential.'https://source.developers.google.com'.helper gcl
 git clone --mirror $SOURCE_URL clone && cd clone
 echo "Cloning complete. Pushing to GSR"
 # change remote origin url
-git push --mirror $GSR_REPO 
+eval git push --mirror $GSR_REPO 
 
 curl -s -X  GET $SUCCESS_URL
 
