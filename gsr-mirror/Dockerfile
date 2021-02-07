@@ -3,7 +3,7 @@ FROM alpine:3.8
 ENV PATH /google-cloud-sdk/bin:$PATH
 ENV CLOUD_SDK_VERSION 198.0.0
 
-RUN apk --no-cache add libc6-compat gcc g++ python make \
+RUN apk --no-cache add libc6-compat gcc g++ python jq make \
         curl \
         py-crcmod \
         bash \
