@@ -26,7 +26,7 @@ jobs:
       - name: Build the Docker image
         run: docker build --tag
           ${SERVICE_NAME}:latest --file
-          Dockerfile ./gsr-mirror
+          Dockerfile /gsr-mirror
       - name: GitHub Image Push
         run: docker push $SERVICE_NAME:latest
          
