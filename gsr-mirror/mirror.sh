@@ -2,6 +2,8 @@
 
 curl -s -X GET $PROGRESS_URL
 
+export PROJ=$( cat /$(pwd)/key.json | jq -r .project_id)
+
 # gcloud auth
 gcloud auth activate-service-account --key-file=$(pwd)/key.json
 git config --global credential.'https://source.developers.google.com'.helper gcloud.sh
