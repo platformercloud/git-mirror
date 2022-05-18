@@ -14,7 +14,7 @@ echo "Cloning complete. Pushing to GSR"
 # change remote origin url
 eval git push --mirror $GSR_REPO 
 
-curl -s -X  GET $SUCCESS_URL
+curl -s -X  GET $SUCCESS_URL -k
 
 cd ..
 rm -Rf clone
